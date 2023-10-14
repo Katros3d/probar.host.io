@@ -6,11 +6,11 @@
     <a-scene>
       
       <a-assets>
-        <a-asset-item id="tree-obj" src="/Modelos3d/ModelosObj/IronMan/IronMan.obj"></a-asset-item>
+        <a-asset-item id="IronMan-obj" src="/Modelos3d/ModelosObj/IronMan/IronMan.obj"></a-asset-item>
         <a-asset-item id="tree-mtl" src="/Modelos3d/ModelosObj/IronMan/IronMan.mtl"></a-asset-item>
       </a-assets>
     
-      <a-obj-model src="#IronMan-obj" mtl="#IronMan-mtl"></a-obj-model>
+      <a-entity obj-model="obj: #IronMan-obj; mtl: #IronMan-mtl"></a-entity>
 
     </a-scene>
   </body>

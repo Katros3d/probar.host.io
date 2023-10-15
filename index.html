@@ -1,17 +1,29 @@
+<!doctype HTML>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      
-      <a-assets>
-        <a-asset-item id="IronMan-obj" src="/Modelos3d/ModelosObj/IronMan/IronMan.obj"></a-asset-item>
-        <a-asset-item id="tree-mtl" src="/Modelos3d/ModelosObj/IronMan/IronMan.mtl"></a-asset-item>
-      </a-assets>
-    
-      <a-entity obj-model="obj: #IronMan-obj; mtl: #IronMan-mtl"></a-entity>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <script src="js/aframe.min.js"></script>
+  <script src="js/aframe-ar.js"></script>
 
+  <body style="margin: 0px; overflow: hidden;">
+
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+      <a-assets>
+          <a-asset-item id="IronMan" src="Modelos3d/ModelosObj/IronMan/IronMan.obj"></a-asset-item>
+      </a-assets>
+      
+      <a-marker type="pattern" url="data/kanji.patt">
+
+        <a-entity   position="0 0 0" 
+                    rotation="0 0 0"
+                    scale="0.10 0.10 0.10"
+                    gltf-model="#IronMan" >
+        </a-entity>
+
+      </a-marker>
+      
+      <a-entity camera></a-entity>
+      
     </a-scene>
   </body>
 </html>

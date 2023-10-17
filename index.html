@@ -4,25 +4,16 @@
   <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
 
   <body style="margin: 0px; overflow: hidden;">
-
     <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
-
       <a-assets>
           <a-asset-item id="pingui" src="Modelos3d/ModelosGltf/pingui/pingui.gltf"></a-asset-item>
       </a-assets>
       
       <a-marker type="pattern" url="data/kanji.patt">
-
-        <a-entity   position="0 0 0" 
-                    rotation="0 0 0"
-                    scale="0.10 0.10 0.10"
-                    gltf-model="#pingui" >
-        </a-entity>
-
+        <a-entity gltf-model="#pingui" ></a-entity>
       </a-marker>
       
       <a-entity camera></a-entity>
-      
     </a-scene>
   </body>
 </html>

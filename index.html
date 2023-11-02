@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- script de A-Frane version1 1.0.0 -->
-    https://aframe.io/releases/1.0.4/aframe.min.js
-    <!-- script de AR.JS con soporte de marker + location -->
-    https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js
-  </head>
-  
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-    
-      <a-marker preset="hiro">
-        <a-sphere position="0 0 0" radius="0.6" color="#EF2D5E"></a-sphere>
-      </a-marker>
-    
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+<head>
+<title>AR.js A-Frame Location-based</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+</head>
+<body>
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: <38.9212496>; longitude: <1.2955855>" scale="10 10 10"></a-entity>
+</a-scene>
+</body>
 </html>
